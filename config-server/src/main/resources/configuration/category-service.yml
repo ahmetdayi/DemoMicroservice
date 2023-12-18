@@ -1,0 +1,39 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+
+server:
+  port: 8070
+
+spring:
+  cloud:
+  application:
+    name: category-service
+  data:
+    mongodb:
+      authentication-database: admin
+      uri: mongodb://admin:123456@localhost:27017
+      host: localhost
+      password: 123456
+      username: admin
+      database: categoryDb
+      port: 27017
+
+
+application:
+  config:
+    category-url: http://localhost:8222/api/v1/category
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+  tracing:
+    sampling:
+      probability: 1.0

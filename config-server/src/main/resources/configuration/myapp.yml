@@ -1,0 +1,35 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+server:
+  port: 8071
+spring:
+  application:
+    name: product-service
+  data:
+    mongodb:
+      host: localhost
+      uri: mongodb://admin:${mongo.username}@localhost:27017
+      password: ${mongo.username}
+      username: admin
+      authentication-database: admin
+      database: productDb
+      port: 27017
+
+application:
+  config:
+    product-url: http://localhost:8222/api/v1/product
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh
+  tracing:
+    sampling:
+      probability: 1.0
+

@@ -1,0 +1,7 @@
+server:
+  port: 8031
+
+twilio:
+  account_sid: AC8c6ab3ab3e29dfe9cbeb8d3a44bde163
+  auth_token: 1d3010e4b201ed0760075d18d44f79ae
+  phone_number: +12564459186
